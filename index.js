@@ -12,5 +12,18 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(upper);
+}
+
+const first = 'what does the this keyword mean?';
+
+function upper(array){
+  let newArr = array.split(" ");
+  
+  let arr = [];
+  for(let count of newArr){
+      newArr = count.charAt(0).toUpperCase()+ count.slice(1);
+      arr.push(newArr)    
+    }
+  return arr.join(" ");
 }
